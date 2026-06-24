@@ -15,7 +15,7 @@ update_os
 setup_hwaccel
 
 msg_info "Installing Lemonade Server"
-if ! fetch_and_deploy_gh_release "lemonade-server" "lemonade-sdk/lemonade" "binary" "latest" "/tmp" "lemonade-server_*-debian13_amd64.deb"; then
+if ! fetch_and_deploy_gh_release "lemonade-server" "lemonade-sdk/lemonade" "binary" "v10.8.0" "/tmp" "lemonade-server_10.8.0-debian13_amd64.deb"; then
   msg_error "Failed to download or deploy Lemonade Server – check network connectivity and GitHub API availability"
   exit 250
 fi
