@@ -12,6 +12,21 @@ setting_up_container
 network_check
 update_os
 
+msg_info "Enabling Debian Backports"
+cat <<'EOF' >/etc/apt/sources.list.d/backports.list
+deb http://deb.debian.org/debian trixie-backports main
+EOF
+$STD apt update
+msg_ok "Enabled Debian Backports"
+
+msg_info "Installing Lemonade Server dependencies"
+$STD apt install -y \
+  fonts-katex \
+  libcpp-httplib0.41 \
+  libmbedcrypto16 \
+  libwebsockets19t64
+msg_ok "Installed Lemonade Server dependencies"
+
 setup_hwaccel
 
 msg_info "Installing Lemonade Server"
