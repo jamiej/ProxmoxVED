@@ -4,7 +4,7 @@ source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxV
 # License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 # Source: https://github.com/lemonade-sdk/lemonade
 
-APP="Lemonade Server"
+APP="Lemonade-Server"
 var_tags="${var_tags:-ai}"
 var_cpu="${var_cpu:-4}"
 var_ram="${var_ram:-8192}"
